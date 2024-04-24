@@ -118,7 +118,8 @@ class IndexScorer(IndexLoader, CandidateGeneration):
         """
 
         # TODO: Remove batching?
-        batch_size = 2 ** 20
+        # batch_size = 2 ** 20
+        batch_size = 2 ** 15
 
         if self.use_gpu:
             centroid_scores = centroid_scores.cuda()
